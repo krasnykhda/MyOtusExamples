@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hw16
+    username: postgres
+    password: 123
+  flyway:
+    enabled: true
+logging:
+  level:
+    org.springframework.jdbc.core.JdbcTemplate: TRACE

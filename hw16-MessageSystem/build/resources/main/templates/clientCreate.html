@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Create client</title>
+
+</head>
+<body>
+
+
+<form th:action="@{/client/save}" method="post">
+    <h1>New client:</h1>
+    <div class="row">
+        <label for="clientName">Name:</label>
+        <input id="clientName" type="text" th:value="${client.name}" name="name"/>
+    </div>
+    <div class="row">
+        <label for="clientStreet">street:</label>
+        <input id="clientStreet" type="text" th:value="${adress.street}" name="street"/>
+    </div>
+    <div class="row">
+        <label for="clientPhoneNumber">phone number:</label>
+        <input id="clientPhoneNumber" type="text" th:value="${phone.number}" name="number"/>
+    </div>
+    <div class="row">
+        <button type="submit">Save with form</button>
+    </div>
+</form>
+</body>
+</html>
